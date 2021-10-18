@@ -1,27 +1,50 @@
-let previousButton = document.querySelector('.previous');
-let nextButton = document.querySelector('.next');
-let i = 0;
+let prev = document.querySelector('#prev');
+let next = document.querySelector('#next');
+let circles = document.querySelectorAll('.circle');
+let progress = document.getElementById('progress');
 
-nextButton.addEventListener('click', () => {
-    if (i === 0) {
-        let progressLine1 = document.querySelector('.progress-line-1');
-        let stepNumber2 = document.querySelector('.number-2');
-        stepNumber2.classList.add('active-number');
-        progressLine1.classList.add('active-border');
-        previousButton.disabled = true;
-        previousButton.classList.add('previous')
-        i++;
-        console.log(i);
+let currentActive = 1;
+next.addEventListener('click', () => {
+    currentActive++;
+    if (currentActive > circles.length) {
+        currentActive = circles.length;
+    }
+    update();
+})
 
+prev.addEventListener('click', () => {
+    currentActive--;
+    if (currentActive < 1) {
+        currentActive = 1;
     }
-    if (i === 1) {
-        let progressLine2 = document.querySelector('.progress-line-2');
-        let stepNumber3 = document.querySelector('.number-3');
-        progressLine2.classList.add('active-border');
-        stepNumber3.classList.add('active-number');
-        previousButton.disabled = false;
-        previousButton.classList.add('prev')
-        i++
+    update();
+})
+
+
+
+function update() {
+    circles.forEach((circle, index) => {
+        if (index < currentActive) {
+            circle.classList.add('active');
+        }
+        else {
+            circle.classList.remove('active');
+        }
+    });
+
+    const actives = document.querySelectorAll('.active');
+
+    progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + "%";
+
+    if (currentActive === 1) {
+        prev.disabled = true;
     }
-    console.log(i)
-});
+    else if (currentActive === circles.length) {
+        next.disabled = true;
+    }
+    else {
+        prev.disabled = false;
+        next.disabled = false;
+    }
+
+}

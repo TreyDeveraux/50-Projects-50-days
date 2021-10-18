@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,34 +7,21 @@
     <title>Progress Bar</title>
     <link rel="stylesheet" href="progressbarstyle.css">
 </head>
-
 <body>
-<div class="container">
-    <div >
-        <h2 class="number-1 active-number">1</h2>
-    </div>
-    <div >
-        <h2 class="number-2">2</h2>
-    </div>
-    <div >
-        <h2 class="number-3">3</h2>
-    </div>
-    <div >
-        <h2 class="number-4">4</h2>
-    </div>
-</div>
-<div class="button-container">
-    <button class="previous" disabled="disabled">Prev</button>
-    <button class="next">Next</button>
-</div>
-<div class="progress-line-container">
-    <span class="progress-line-1"></span>
-    <span class="progress-line-2"></span>
-    <span class="progress-line-3"></span>
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+        
+        <button class="btn" id="prev">Prev</button>
+        <button class="btn" id="next">Next</button>
     
-</div>
+    </div>
 
-<script src="progressbarapp.js"></script>
+    <script src="progressbarapp.js"></script>
 </body>
-
 </html>
