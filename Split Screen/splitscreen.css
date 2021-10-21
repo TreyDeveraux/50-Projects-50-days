@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    color: #fff;
+	font-size: 40px;
+	text-shadow: 2px 4px 4px #282828;
+    position: relative;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    background-color: bisque;
+}
+.n-div-container{
+    height: 100vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 1.5s ease;
+    position: relative;
+    background-color: rgba(105, 143, 0, 0.726);
+ }
+.n-div-container::before{
+    content: " ";
+    background-image: url(img/pexels-nana-dua-4581816.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.6;
+
+    
+}
+.a-div-contianer{
+   height: 100vh;
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   transition: 1.5s ease;
+   position: relative;
+   background-color: rgb(77, 0, 0);
+}
+.a-div-contianer::before{
+    content: " ";
+    background-image: url(img/gsmarena_001.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;    
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.6;
+}
+.nvidia-button{
+    font-size: 24px;
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    margin-top: 50px;
+    transition: .4s ease;
+    cursor: pointer;
+    position: relative;
+
+}
+.amd-button{
+    font-size: 24px;
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    margin-top: 50px;
+    transition: .4s ease;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.nvidia-button:hover{
+    background-color: greenyellow;
+}
+
+.amd-button:hover{
+    background-color: red;
+}
+
+.n-div-container:hover{
+    width: 175%;
+}
+.a-div-contianer:hover{
+    width: 175%;
+}
+
