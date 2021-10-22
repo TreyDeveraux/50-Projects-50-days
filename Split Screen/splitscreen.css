@@ -28,12 +28,14 @@ h1{
     transition: 1.5s ease;
     position: relative;
     background-color: rgba(105, 143, 0, 0.726);
+    max-height: 100vh;
+    
  }
 .n-div-container::before{
     content: " ";
     background-image: url(img/pexels-nana-dua-4581816.jpg);
     background-position: center;
-    background-size: cover;
+    background-size:  cover;
     background-repeat: no-repeat;
     position: absolute;
     top: 0px;
@@ -98,7 +100,7 @@ h1{
 }
 
 .amd-button:hover{
-    background-color: red;
+    background-color: rgb(155, 4, 4);
 }
 
 .n-div-container:hover{
@@ -106,5 +108,7 @@ h1{
 }
 .a-div-contianer:hover{
     width: 175%;
+   
+
 }
 
