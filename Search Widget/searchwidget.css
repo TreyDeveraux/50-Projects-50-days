@@ -1,16 +1,17 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-body{
+.container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.search-button{
+.search-button {
     margin-left: -45px;
     height: 40px;
     width: 50px;
@@ -18,32 +19,37 @@ body{
     transition: .5s ease;
 
 }
-.search-button:hover{
+
+.search-button:hover {
     cursor: pointer;
-   
+
 }
-.search-button.btn-clicked{
+
+.search-button.btn-clicked {
     background: transparent;
     border: none;
     transition: 1s ease;
 }
-input{
+
+input {
     width: 0%;
     border: 2px solid #c0c0c0;
     height: 40px;
     max-width: 0px;
     transition: 1s;
 
-    
+
 
 }
-input:focus{
+
+input:focus {
     outline: none;
     box-shadow: 0px 5px 5px rgb(34, 34, 34);
-    
-    
+
+
 }
-input.input-clicked{
+
+input.input-clicked {
     display: block;
     width: 100%;
     height: 40px;
@@ -51,22 +57,23 @@ input.input-clicked{
     transition: 1s;
     border-radius: .5em;
 }
-.close-search{
+
+.close-search {
     display: inline;
     border: none;
     background: transparent;
-   cursor: pointer;
+    cursor: pointer;
     margin: 0;
     padding: 0px;
     position: absolute;
-    top: 47%;
-    right:45.5%;
-    
+    top: 45%;
+    right: 43%;
+
 }
 
 
 
-.hidden{
+.hidden {
     display: none;
-    
+
 }
