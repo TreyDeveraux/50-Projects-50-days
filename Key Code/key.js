@@ -1,11 +1,15 @@
 const insert = document.getElementById('insert');
 let header = document.querySelector('.header');
 let resultContainer = document.querySelector('.result-container');
+let table = document.getElementById('table-container');
+
 
 window.addEventListener('keydown', function(event){
     header.classList.add('hidden');
     resultContainer.classList.remove('hidden');
     resultContainer.classList.add('active');
+    table.classList.add('hidden');
+    
 
     let key = document.querySelector('.result-1');
     key.textContent = event.key;
@@ -48,14 +52,16 @@ changeColorScheme.addEventListener('click', () => {
 let tableBtn = document.getElementById('toggle-table');
 tableBtn.innerText = 'Table';
 tableBtn.addEventListener('click', () => {
-    let table = document.getElementById('table-container');
     header.classList.toggle('hidden');
     table.classList.toggle('hidden');
 
     if(resultContainer.classList.contains('active')){
+        
         header.classList.add('hidden');
         resultContainer.classList.toggle('hidden');
     };
     
 
-})
+});
+
+
