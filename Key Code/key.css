@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --dark-mode-pri: #424242;
+    --dark-mode-sec: #700B97;
+    --dark-mode-ter: #5F5F5F;
+    --dark-mode-text: #F2F2F8;
+    --dark-mode-outline: #FFF;
+
+    --light-mode-pri: #F2F2F8;
+    --light-mode-sec: #FFF;
+    --light-mode-ter: #B9E9FF;
+    --light-mode-text: #424242;
+    --light-mode-outline: #424242;
+
+}
+
+.table-container {
+    height: 80%;
+    width: 100%;
+    max-width: 330px;
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: auto;
+    background-color: var(--dark-mode-ter);
+    border-radius: 5px;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    color: var(--dark-mode-text);
+    padding: 10px 0px 10px 15px;
+    border-bottom: 2px solid var(--dark-mode-sec)
+}
+
+td {
+    height: 40px;
+    width: 50%;
+    padding: 10px 0px 10px 15px;
+    color: var(--dark-mode-text);
+    border-bottom: 1px solid var(--dark-mode-pri);
+
+}
+
+
+body {
+    background-color: var(--dark-mode-pri);
+
+
+}
+
+h1 {
+    background-color: var(--dark-mode-ter);
+    color: var(--dark-mode-text);
+    border-radius: 5px;
+    padding: 20px;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+
+.button-container {
+    display: flex;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.color-scheme-btn {
+    margin-right: 15px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--dark-mode-ter);
+    color: var(--dark-mode-text);
+    transition: .5s;
+}
+
+.color-scheme-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 10px var(--dark-mode-sec);
+    cursor: pointer;
+
+}
+
+.color-scheme-btn:focus {
+    outline: none;
+}
+
+.toggle-table {
+
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--dark-mode-ter);
+    color: var(--dark-mode-text);
+    transition: .5s;
+}
+
+.toggle-table:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 10px var(--dark-mode-sec);
+    cursor: pointer;
+
+}
+
+.toggle-table:focus {
+    outline: none;
+}
+
+.result-container {
+    display: flex;
+    position: relative;
+}
+
+h2 {
+    margin: 0px 90px 0px 90px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    color: var(--dark-mode-text);
+    background-color: var(--dark-mode-sec);
+    width: 125px;
+    height: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.result-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-mode-ter);
+    border-top: .5px solid black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: var(--dark-mode-text);
+    height: 50px;
+    width: 125px;
+    margin: 20px;
+    position: absolute;
+    top: 0%;
+    left: 11.5%;
+}
+
+.result-2 {
+    background-color: var(--dark-mode-ter);
+    border-top: .5px solid black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: var(--dark-mode-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 125px;
+    margin: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+    top: 0%;
+    left: 61.5%;
+}
+
+/* General Classes */
+.hidden {
+    display: none;
+}
+
+/* Light Mode */
+h1.light-mode {
+    background-color: var(--light-mode-sec);
+    box-shadow: 0px 5px 8px var(--light-mode-outline);
+    color: var(--light-mode-text);
+    border: 1px solid var(--light-mode-outline);
+}
+
+h2.light-mode {
+    background-color: var(--light-mode-ter);
+    color: var(--light-mode-text);
+}
+
+body.light-mode {
+    background-color: var(--light-mode-pri);
+}
+
+.result-1.light-mode,
+.result-2.light-mode {
+    background-color: var(--light-mode-sec);
+    color: var(--light-mode-text);
+}
+
+.color-scheme-btn.light-mode {
+    background-color: var(--light-mode-sec);
+    color: var(--light-mode-text);
+}
+
+.color-scheme-btn.light-mode:hover {
+    box-shadow: 0px 5px 10px var(--light-mode-outline);
+}
+
+.toggle-table.light-mode {
+    background-color: var(--light-mode-sec);
+    color: var(--light-mode-text);
+}
+
+.toggle-table.light-mode:hover {
+    box-shadow: 0px 5px 10px var(--light-mode-outline);
+}
+
+.table-container.light-mode {
+    background-color: var(--light-mode-sec);
+}
+
+th.light-mode {
+    color: var(--light-mode-text);
+    border-bottom: 2px solid#B9E9FF;
+}
+
+td.light-mode {
+    color: var(--light-mode-text);
+    border-bottom: 1px solid var(--light-mode-pri);
+
+}
+
+/* Had to add this in because it wasn't taking on the same class as the first h2. Have to select with querySelectorAll and then loop through each element to add the same style that is paried to a class */
+.result-2-heading.light-mode {
+    background-color: var(--light-mode-ter);
+}
