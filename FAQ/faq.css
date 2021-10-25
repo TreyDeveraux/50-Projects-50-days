@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&family=Roboto&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -5,13 +6,18 @@
 }
 
 body {
-    color: white;
+    color: #F2F2F8;
+    background-color: #424242;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     font-size: 25px;
 }
 
+.faq-header{
+    font-size: 50px;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -21,13 +27,16 @@ h1 {
 }
 
 .question-container {
-    height: 500px;
+    padding: 10px;
+    height: 545px;
+    background-color: #3f3f3f;
+    border-radius: 5px;
 }
 
 .question-answer {
     display: flex;
     flex-direction: column;
-    background-color: #c0c0c0;
+    background-color: #5F5F5F;
     height: 80px;
     max-height: 150px;
     width: 450px;
@@ -49,41 +58,10 @@ h1 {
 
 }
 
-.outter {
-    height: 20px;
-    width: 20px;
-    background-color: black;
-    border-radius: 50%;
+.q-button{
+    color: white;
     transition: 1s ease;
 }
-
-.inner {
-    height: 15px;
-    width: 15px;
-    background-color: red;
-    transform: translateX(2.75px) translateY(-17px);
-    border-radius: 50%;
-    border-radius: 50%;
-    transition: 1s ease;
-
-    z-index: 99;
-}
-
-.outter.button-active {
-    height: 5px;
-    border-radius: 0;
-    transform: rotate(45deg) translateY(10px);
-}
-
-.inner.button-active {
-    height: 5px;
-    width: 20px;
-    border-radius: 0;
-    transform: rotate(-45deg) translateX(3px);
-    background-color: black;
-
-}
-
 
 
 button {
@@ -100,4 +78,5 @@ button {
 /* General Classess */
 .question-answer.active {
     height: 150px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }

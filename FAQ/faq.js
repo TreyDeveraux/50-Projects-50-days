@@ -18,7 +18,10 @@ questionArray.forEach(question => {
 
     q.textContent = questionArray[i];
     a.textContent = answerArray[i];
-    qButton.textContent = 'X';
+    qButton.innerHTML = ` 
+    <i class="fas fa-arrow-down icon-default"></i>
+    
+    `;
 
     questionContainer.appendChild(qContainer);
     qContainer.appendChild(q);
@@ -27,10 +30,22 @@ questionArray.forEach(question => {
 
     qButton.addEventListener('click', () => {
         qContainer.classList.toggle('active');
+        qButton.classList.toggle('active-button');
+        if (qButton.classList.contains('active-button')) {
+            qButton.innerHTML = `
+            <i class="fas fa-times icon-hover"></i>
+            `
+        }
+        else {
+            qButton.innerHTML = ` 
+            <i class="fas fa-arrow-down icon-default"></i>
+            `;
+        }
+
     })
 
     i++;
-    
+
 
 });
 
