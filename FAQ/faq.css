@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +19,7 @@ h1 {
 .faq-header{
     font-size: 50px;
 }
+
 .container {
     display: flex;
     flex-direction: column;
